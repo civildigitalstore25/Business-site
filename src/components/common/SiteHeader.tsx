@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { ROUTES, NAV_LINKS, SITE } from "@/lib/constants";
+import { ROUTES, NAV_LINKS, SITE, PUBLIC_ASSETS } from "@/lib/constants";
 import { NavDropdown } from "@/components/common/NavDropdown";
 import type { NavChild } from "@/lib/constants/nav";
 
@@ -61,7 +62,16 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 bg-navy border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href={ROUTES.home} className="flex items-center gap-2 shrink-0 min-w-0">
+          <Link href={ROUTES.home} className="flex items-center gap-2.5 shrink-0 min-w-0 group">
+            <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-lg overflow-hidden border border-white/20 shadow-sm shrink-0 bg-white/10">
+              <Image
+                src={PUBLIC_ASSETS.logo}
+                alt={`${SITE.name} Logo`}
+                fill
+                className="object-cover object-center group-hover:scale-105 transition-transform"
+                priority
+              />
+            </div>
             <span className="text-lg sm:text-xl font-bold text-white tracking-tight truncate">
               {SITE.name.toUpperCase()}
             </span>

@@ -1,9 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone } from "lucide-react";
 import {
   SITE,
   CONTACT,
   ROUTES,
+  PUBLIC_ASSETS,
   FOOTER_SERVICES,
   FOOTER_EXPLORE,
   FOOTER_COMPANY,
@@ -32,7 +34,17 @@ function FooterColumn({ title, links }: { title: string; links: readonly { label
 function FooterBrand() {
   return (
     <>
-      <span className="text-lg font-bold tracking-tight">{SITE.name.toUpperCase()}</span>
+      <div className="flex items-center gap-2.5 mb-2">
+        <div className="relative w-8 h-8 rounded-lg overflow-hidden border border-white/20 shrink-0 bg-white/10">
+          <Image
+            src={PUBLIC_ASSETS.logo}
+            alt={`${SITE.name} Logo`}
+            fill
+            className="object-cover object-center"
+          />
+        </div>
+        <span className="text-lg font-bold tracking-tight">{SITE.name.toUpperCase()}</span>
+      </div>
       <p className="mt-2 text-xs text-slate-400 leading-relaxed">{SITE.tagline}</p>
       <div className="mt-4">
         <SocialIcons />

@@ -12,8 +12,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const post = getBlogPost(slug);
-  if (!post) return { title: "Post Not Found | Growza" };
-  return { title: `${post.title} | Growza Blog`, description: post.excerpt };
+  if (!post) return { title: "Post Not Found | Tomscope" };
+  return { title: `${post.title} | Tomscope Blog`, description: post.excerpt };
 }
 
 export default async function BlogPostPage({ params }: Props) {

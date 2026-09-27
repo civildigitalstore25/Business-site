@@ -9,7 +9,7 @@ export const BLOG_POSTS = [
     readTime: "4 min read",
     content: `Next.js combines React with server-side rendering and static generation, which helps business websites rank better and load faster.
 
-For Growza clients, this means marketing pages that score well on Core Web Vitals, blog content that is indexable on day one, and a codebase that scales when you add dashboards or customer portals later.
+For Tomscope clients, this means marketing pages that score well on Core Web Vitals, blog content that is indexable on day one, and a codebase that scales when you add dashboards or customer portals later.
 
 We pair Next.js with TypeScript and Tailwind CSS to keep projects maintainable — following our DRY and reusable-component standards so your site stays easy to update.`,
   },

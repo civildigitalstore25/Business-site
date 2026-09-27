@@ -4,8 +4,8 @@ import { ROUTES } from "@/lib/constants";
 import { TechStackFilter } from "@/components/tech-stack/TechStackFilter";
 
 export const metadata = {
-  title: "Tech Stack | Growza",
-  description: "Technologies, frameworks, and tools Growza uses for development and delivery.",
+  title: "Tech Stack | Tomscope",
+  description: "Technologies, frameworks, and tools Tomscope uses for development and delivery.",
 };
 
 export default function TechStackPage() {

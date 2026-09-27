@@ -1,18 +1,18 @@
 export const SITE = {
-  name: "Growza",
+  name: "Tomscope",
   tagline: "IT Consulting & Software Development",
-  title: "Growza | IT Consulting, Web & Mobile Development",
+  title: "Tomscope | IT Consulting, Web & Mobile Development",
   description:
-    "Growza delivers IT consulting, website and mobile app development, hosting, SEO, DevOps, and API integrations — built with agile practices and clean, maintainable code.",
-  url: "https://github.com/Umarfarook1912",
-  metadataBase: "https://github.com/Umarfarook1912",
+    "Tomscope delivers IT consulting, website and mobile app development, hosting, SEO, DevOps, and API integrations — built with agile practices and clean, maintainable code.",
+  url: "https://tomscope.com",
+  metadataBase: "https://tomscope.com",
   locale: "en_US",
 } as const;
 
 export const CONTACT = {
-  email: "growza@gmail.com",
+  email: "info@tomscope.com",
   phone: "+91 78716 94931",
-  address: "Dindigul, Tamil Nadu, India",
+  address: "Vadakkumangudi, Thanjavur, Tamil Nadu, India",
 } as const;
 
 export const COMPANY = {

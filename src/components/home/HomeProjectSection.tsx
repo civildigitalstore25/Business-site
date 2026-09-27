@@ -26,7 +26,7 @@ export function HomeProjectSection() {
             Projects We&apos;ve Delivered
           </h2>
           <p className="text-xs sm:text-base lg:text-lg text-[#64748B] max-w-2xl mx-auto leading-relaxed">
-            Explore live e-commerce stores, specialized marketplaces, and custom web platforms engineered by Growza for growing businesses.
+            Explore live e-commerce stores, specialized marketplaces, and custom web platforms engineered by Tomscope for growing businesses.
           </p>
         </MotionSection>
 

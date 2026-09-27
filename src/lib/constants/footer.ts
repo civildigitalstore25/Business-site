@@ -1,7 +1,7 @@
 import { ROUTES } from "./routes";
 
 export const FOOTER = {
-  copyright: "Growza. All rights reserved.",
+  copyright: "Tomscope. All rights reserved.",
   sections: {
     contact: "Contact",
     follow: "Follow Us",
@@ -9,10 +9,11 @@ export const FOOTER = {
 } as const;
 
 export const SOCIAL_LINKS = [
-  { id: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/umar-farook-j-56b371280/" },
-  { id: "github", label: "GitHub", href: "https://github.com/Umarfarook1912" },
-  { id: "whatsapp", label: "WhatsApp", href: "https://api.whatsapp.com/send/?phone=7871694931&text&type=phone_number&app_absent=0" },
-  { id: "facebook", label: "Facebook", href: "https://www.facebook.com/umar.f.376?mibextid=2JQ9oc" },
+  { id: "facebook", label: "Facebook", href: "https://www.facebook.com/tommscope" },
+  { id: "instagram", label: "Instagram", href: "https://www.instagram.com/tom_scope/" },
+  { id: "youtube", label: "YouTube", href: "https://www.youtube.com/c/TomScope" },
+  { id: "justdial", label: "Justdial", href: "https://www.justdial.com/Thanjavur/Tom-Scope-Vadakkumangudi/9999P4362-4362-240127124430-T2K7_BZDET" },
+  { id: "google", label: "Google", href: "https://share.google/lt3nJXixixUTygdTU" },
 ] as const;
 
 export const FOOTER_SERVICES = [

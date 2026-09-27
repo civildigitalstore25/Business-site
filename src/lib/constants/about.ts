@@ -1,7 +1,7 @@
 import { COMPANY, CODING_PRINCIPLES } from "./site";
 
 export const ABOUT_HERO = {
-  eyebrow: "About Growza",
+  eyebrow: "About Tomscope",
   headline: "A Development Team Focused on Quality and Delivery.",
   subheadline:
     "We are an IT consulting and software development team helping businesses build websites, mobile apps, and integrations with practical technology choices and agile delivery.",

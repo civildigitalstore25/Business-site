@@ -6,8 +6,8 @@ import {
 } from "@/lib/constants";
 
 export const metadata = {
-  title: "About Us | Growza",
-  description: "Learn about Growza — our vision, mission, and development approach.",
+  title: "About Us | Tomscope",
+  description: "Learn about Tomscope — our vision, mission, and development approach.",
 };
 
 export default function AboutPage() {

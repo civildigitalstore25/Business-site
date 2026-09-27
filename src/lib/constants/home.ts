@@ -2,7 +2,7 @@ export const HOME_HERO = {
   eyebrow: "IT Consulting & Software Development",
   headline: "We Build Solutions.\nYou Grow Faster.",
   subheadline:
-    "Growza provides IT consulting, website and mobile app development, hosting, SEO, DevOps, and API integrations — delivered with agile methodology and clean, maintainable code.",
+    "Tomscope provides IT consulting, website and mobile app development, hosting, SEO, DevOps, and API integrations — delivered with agile methodology and clean, maintainable code.",
   primaryCta: { label: "Book a Consultation", href: "/#consultation" },
   secondaryCta: { label: "View Our Services", href: "/services" },
 } as const;

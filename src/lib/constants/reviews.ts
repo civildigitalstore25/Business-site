@@ -4,7 +4,7 @@ export const CLIENT_REVIEWS = [
     name: "Rajesh Kumar",
     role: "Small Business Owner",
     rating: 5,
-    text: "Growza built our business website on time and made it mobile-friendly. Communication was clear throughout the project.",
+    text: "Tomscope built our business website on time and made it mobile-friendly. Communication was clear throughout the project.",
   },
   {
     id: "review-2",

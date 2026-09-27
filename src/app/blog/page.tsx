@@ -3,8 +3,8 @@ import { ArrowRight, Calendar } from "lucide-react";
 import { BLOG_POSTS } from "@/lib/constants";
 
 export const metadata = {
-  title: "Blog | Growza",
-  description: "Insights on web development, integrations, and DevOps from the Growza team.",
+  title: "Blog | Tomscope",
+  description: "Insights on web development, integrations, and DevOps from the Tomscope team.",
 };
 
 export default function BlogPage() {

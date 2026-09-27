@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
   <rect width="1200" height="630" fill="#0A0A0A"/>
-  <text x="600" y="300" text-anchor="middle" font-family="Georgia, serif" font-size="72" font-weight="bold" fill="#D4AF37">Growza</text>
+  <text x="600" y="300" text-anchor="middle" font-family="Georgia, serif" font-size="72" font-weight="bold" fill="#D4AF37">Tomscope</text>
   <text x="600" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#E5E5E5">Building Digital Growth</text>
   <rect x="500" y="400" width="200" height="3" fill="url(#gold)" rx="1"/>
   <defs>

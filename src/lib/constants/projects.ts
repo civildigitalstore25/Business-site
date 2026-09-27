@@ -15,7 +15,7 @@ export const PROJECTS: ProjectItem[] = [
     name: "SoftzCart",
     category: "Digital Software E-Commerce",
     description:
-      "A full-featured digital software marketplace built by Growza — featuring brand categories (Autodesk, Adobe, Microsoft, Antivirus), instant license key distribution, shopping cart, checkout, and admin management workflows.",
+      "A full-featured digital software marketplace built by Tomscope — featuring brand categories (Autodesk, Adobe, Microsoft, Antivirus), instant license key distribution, shopping cart, checkout, and admin management workflows.",
     highlights: [
       "Brand-focused software catalog with search & filter",
       "Instant digital checkout & automated fulfillment",

@@ -4,7 +4,7 @@ import { SERVICES_HERO, ROUTES } from "@/lib/constants";
 import { ServicesPageContent } from "@/components/services/ServicesPageContent";
 
 export const metadata = {
-  title: "Services | Growza",
+  title: "Services | Tomscope",
   description: "End-to-end IT consulting and software development services for enterprise clients.",
 };
 

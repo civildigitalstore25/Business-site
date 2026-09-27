@@ -38,7 +38,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Please provide a valid email address." }, { status: 400 });
     }
 
-    const adminEmail = process.env.ADMIN_EMAIL || "growza@gmail.com";
+    const adminEmail = process.env.ADMIN_EMAIL || "info@tomscope.com";
     const smtpHost = process.env.SMTP_HOST;
     const smtpPort = process.env.SMTP_PORT;
     const smtpUser = process.env.SMTP_USER;
@@ -55,7 +55,7 @@ export async function POST(request: Request) {
           <p style="margin:0;"><strong>Message:</strong></p>
           <p style="margin:10px 0 0;white-space:pre-wrap;">${escapeHtml(message)}</p>
         </div>
-        <p style="font-size:12px;color:#64748b;margin-top:24px;">Submitted from the Growza consultation form.</p>
+        <p style="font-size:12px;color:#64748b;margin-top:24px;">Submitted from the Tomscope consultation form.</p>
       </div>
     `;
 
@@ -77,10 +77,10 @@ export async function POST(request: Request) {
     });
 
     await transporter.sendMail({
-      from: `"Growza Consultation" <${smtpUser}>`,
+      from: `"Tomscope Consultation" <${smtpUser}>`,
       to: adminEmail,
       replyTo: workEmail,
-      subject: `Growza Consultation — ${fullName} (${projectType})`,
+      subject: `Tomscope Consultation — ${fullName} (${projectType})`,
       html: emailHtml,
     });
 

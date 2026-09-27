@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, X, Send, Sparkles, AlertCircle, RefreshCw } from "lucide-react";
+import { PUBLIC_ASSETS } from "@/lib/constants";
 
 interface Message {
   id: string;
@@ -31,7 +33,7 @@ export function ChatWidget() {
   // Load chat history from Session Storage on mount
   useEffect(() => {
     try {
-      const savedHistory = sessionStorage.getItem("growza_chat_history");
+      const savedHistory = sessionStorage.getItem("tomscope_chat_history");
       if (savedHistory) {
         setMessages(JSON.parse(savedHistory));
       } else {
@@ -39,7 +41,7 @@ export function ChatWidget() {
         const initialMessage: Message = {
           id: "welcome",
           role: "model",
-          content: "Hi! Welcome to **Growza**. I'm your AI support assistant. How can I help you today? Feel free to ask about our software development, IT consulting, hosting, or other services!",
+          content: "Hi! Welcome to **Tomscope**. I'm your AI support assistant. How can I help you today? Feel free to ask about our software development, IT consulting, hosting, or other services!",
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
         };
         setMessages([initialMessage]);
@@ -53,7 +55,7 @@ export function ChatWidget() {
   useEffect(() => {
     if (messages.length > 0) {
       try {
-        sessionStorage.setItem("growza_chat_history", JSON.stringify(messages));
+        sessionStorage.setItem("tomscope_chat_history", JSON.stringify(messages));
       } catch (err) {
         console.error("Failed to save chat history to session storage", err);
       }
@@ -143,11 +145,11 @@ export function ChatWidget() {
 
   const clearChatHistory = () => {
     try {
-      sessionStorage.removeItem("growza_chat_history");
+      sessionStorage.removeItem("tomscope_chat_history");
       const initialMessage: Message = {
         id: "welcome",
         role: "model",
-        content: "Hi! Welcome to **Growza**. I'm your AI support assistant. How can I help you today? Feel free to ask about our software development, IT consulting, hosting, or other services!",
+        content: "Hi! Welcome to **Tomscope**. I'm your AI support assistant. How can I help you today? Feel free to ask about our software development, IT consulting, hosting, or other services!",
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       };
       setMessages([initialMessage]);
@@ -205,13 +207,18 @@ export function ChatWidget() {
             <div className="bg-[#0F172A] dark:bg-[#1E293B] text-white p-4 flex items-center justify-between border-b border-slate-800">
               <div className="flex items-center gap-3">
                 <div className="relative">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#0284C7] to-[#38BDF8] flex items-center justify-center text-white shadow-md">
-                    <Sparkles size={20} className="text-white animate-pulse" />
+                  <div className="w-10 h-10 rounded-full overflow-hidden border border-sky-400/40 shadow-md relative bg-slate-800">
+                    <Image
+                      src={PUBLIC_ASSETS.logo}
+                      alt="Tomscope Logo"
+                      fill
+                      className="object-cover object-center"
+                    />
                   </div>
-                  <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-[#0F172A] rounded-full"></span>
+                  <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-[#0F172A] rounded-full z-10"></span>
                 </div>
                 <div>
-                  <h3 className="font-bold text-sm tracking-wide">Growza Assistant</h3>
+                  <h3 className="font-bold text-sm tracking-wide">Tomscope Assistant</h3>
                   <div className="flex items-center gap-1.5">
                     <span className="text-[10px] text-slate-300 font-medium">Gemini 2.5 Flash</span>
                     <span className="text-[8px] px-1 bg-green-500/20 text-green-400 rounded">Online</span>
