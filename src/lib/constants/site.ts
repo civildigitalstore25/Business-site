@@ -4,8 +4,8 @@ export const SITE = {
   title: "Tomscope | IT Consulting, Web & Mobile Development",
   description:
     "Tomscope delivers IT consulting, website and mobile app development, hosting, SEO, DevOps, and API integrations — built with agile practices and clean, maintainable code.",
-  url: "https://www.tomscope.com",
-  metadataBase: "https://www.tomscope.com",
+  url: "https://tomscope.com",
+  metadataBase: "https://tomscope.com",
   locale: "en_US",
 } as const;
 
