@@ -11,9 +11,13 @@ export const SITE = {
 
 export const CONTACT = {
   email: "info@tomscope.com",
-  phone: "+91 78716 94931",
-  address: "Vadakkumangudi, Thanjavur, Tamil Nadu, India",
+  phone: "+91 88074 23228",
+  address: "TomScope Digital Marketing Agency",
+  visitLabel: "Visit us",
 } as const;
+
+export const MAP_EMBED_SRC =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9363411797235!2d79.07937527480436!3d10.73938978940714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baacfde10279d07%3A0x34e9508634d76811!2sTom%20Scope%20Digital%20Marketing%20Agency!5e0!3m2!1sen!2sin!4v1790489129627!5m2!1sen!2sin";
 
 export const COMPANY = {
   vision:

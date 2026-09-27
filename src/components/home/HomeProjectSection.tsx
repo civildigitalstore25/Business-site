@@ -183,7 +183,7 @@ export function HomeProjectSection() {
             <span className="text-xs text-slate-400 font-medium hidden xs:inline">Tap card to focus</span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
             {PROJECTS.map((project) => {
               const isSelected = project.id === activeId;
               return (
@@ -198,13 +198,13 @@ export function HomeProjectSection() {
                 >
                   <div>
                     {/* Card Thumbnail */}
-                    <div className="relative aspect-video w-full overflow-hidden bg-slate-900">
+                    <div className="relative aspect-[16/11] w-full overflow-hidden bg-slate-900">
                       <Image
                         src={project.image}
                         alt={project.imageAlt}
                         fill
                         className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 20vw"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       />
                       <div className="absolute top-2 right-2">
                         <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-navy/85 backdrop-blur-md text-white border border-white/10">
@@ -214,18 +214,18 @@ export function HomeProjectSection() {
                     </div>
 
                     {/* Card Body */}
-                    <div className="p-3.5">
-                      <h4 className="text-sm font-bold text-navy group-hover:text-sky transition-colors mb-1 truncate">
+                    <div className="p-3 sm:p-5">
+                      <h4 className="text-xs sm:text-base font-bold text-navy group-hover:text-sky transition-colors mb-1 sm:mb-1.5 truncate">
                         {project.name}
                       </h4>
-                      <p className="text-[11px] text-slate-500 line-clamp-2 leading-relaxed mb-2">
+                      <p className="text-[10px] sm:text-xs text-slate-500 line-clamp-2 sm:line-clamp-3 leading-relaxed mb-1 sm:mb-2">
                         {project.description}
                       </p>
                     </div>
                   </div>
 
                   {/* Card Footer */}
-                  <div className="px-3.5 pb-3 pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+                  <div className="px-3 sm:px-5 pb-3 sm:pb-4 pt-2 sm:pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
                     <span className={`text-[10px] font-bold uppercase tracking-wider ${isSelected ? "text-sky" : "text-slate-400 group-hover:text-navy"}`}>
                       {isSelected ? "Featured Now" : "Showcase"}
                     </span>

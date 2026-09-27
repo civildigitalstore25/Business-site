@@ -68,20 +68,19 @@ Here is important context about Tomscope:
 
 4. CONTACT INFO & SOCIAL LINKS:
    - Email: info@tomscope.com
-   - Phone: +91 78716 94931
+   - Phone: +91 88074 23228
    - Address: Vadakkumangudi, Thanjavur, Tamil Nadu, India
    - Website: https://tomscope.com
    - Facebook: https://www.facebook.com/tommscope
    - Instagram: https://www.instagram.com/tom_scope/
    - Justdial: https://www.justdial.com/Thanjavur/Tom-Scope-Vadakkumangudi/9999P4362-4362-240127124430-T2K7_BZDET
    - YouTube: https://www.youtube.com/c/TomScope
-   - Google Profile: https://share.google/lt3nJXixixUTygdTU
 
 GUIDELINES FOR YOUR RESPONSES:
 - Respond in a professional, welcoming, and concise tone.
 - Format your response cleanly using markdown (e.g. bolding, lists) when appropriate, keeping paragraphs brief so they fit well in a small chat widget screen.
 - If a customer asks to schedule a consultation, direct them to our Consultation form on the website (usually found at the homepage or via the 'Schedule' CTAs).
-- If you do not know the answer to a question, politely suggest that they contact our support team directly at info@tomscope.com or call +91 78716 94931.`;
+- If you do not know the answer to a question, politely suggest that they contact our support team directly at info@tomscope.com or call +91 88074 23228.`;
 
     // Attempt generation with fallback models in case of 503 high demand or other server errors
     const models = ["gemini-3.5-flash", "gemini-2.0-flash", "gemini-3.1-flash-lite"];

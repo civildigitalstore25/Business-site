@@ -13,7 +13,6 @@ export const SOCIAL_LINKS = [
   { id: "instagram", label: "Instagram", href: "https://www.instagram.com/tom_scope/" },
   { id: "youtube", label: "YouTube", href: "https://www.youtube.com/c/TomScope" },
   { id: "justdial", label: "Justdial", href: "https://www.justdial.com/Thanjavur/Tom-Scope-Vadakkumangudi/9999P4362-4362-240127124430-T2K7_BZDET" },
-  { id: "google", label: "Google", href: "https://share.google/lt3nJXixixUTygdTU" },
 ] as const;
 
 export const FOOTER_SERVICES = [

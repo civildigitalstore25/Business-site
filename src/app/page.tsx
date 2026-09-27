@@ -6,6 +6,7 @@ import { HomeReviews } from "@/components/home/HomeReviews";
 import { HomeTechStrip } from "@/components/home/HomeTechStrip";
 import { HomeBlogPreview } from "@/components/home/HomeBlogPreview";
 import { HomeConsultationClient } from "@/components/home/HomeConsultationClient";
+import { ContactMap } from "@/components/home/ContactMap";
 import { HomeFaq } from "@/components/home/HomeFaq";
 
 export default function HomePage() {
@@ -20,6 +21,7 @@ export default function HomePage() {
       <HomeBlogPreview />
       <HomeFaq />
       <HomeConsultationClient />
+      <ContactMap />
     </>
   );
 }
