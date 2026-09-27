@@ -9,6 +9,8 @@ export const SITE = {
   locale: "en_US",
 } as const;
 
+export const GA_MEASUREMENT_ID = "G-H3SSKLJ5B9";
+
 export const CONTACT = {
   email: "info@tomscope.com",
   phone: "+91 88074 23228",
