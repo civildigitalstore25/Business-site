@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { SectionLink as Link } from "@/components/common/SectionLink";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -51,7 +51,7 @@ export function SiteHeader() {
             : "text-sm font-medium text-slate-300 hover:text-white transition-colors whitespace-nowrap",
           isNavActive(pathname, link.href) && "text-sky"
         )}
-        onClick={mobile ? closeMobile : undefined}
+        onNavigate={mobile ? closeMobile : undefined}
       >
         {link.label}
       </Link>
@@ -103,7 +103,7 @@ export function SiteHeader() {
           <Link
             href={ROUTES.consultation}
             className="btn-sky text-sm block w-full text-center mt-3"
-            onClick={closeMobile}
+            onNavigate={closeMobile}
           >
             Book a Consultation
           </Link>

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { SectionLink as Link } from "@/components/common/SectionLink";
 import { ArrowRight } from "lucide-react";
 import { ROUTES } from "@/lib/constants";
 import { TechStackFilter } from "@/components/tech-stack/TechStackFilter";

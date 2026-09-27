@@ -53,7 +53,7 @@ export function HomeConsultationForm() {
 
   if (submitted) {
     return (
-      <section className="bg-off-white py-12 sm:py-20" id="consultation">
+      <section className="bg-off-white py-12 sm:py-20">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
           <CheckCircle2 className="mx-auto text-sky mb-4" size={48} />
           <h3 className="text-2xl font-bold text-navy mb-2">Request Received</h3>
@@ -66,7 +66,7 @@ export function HomeConsultationForm() {
   }
 
   return (
-    <section className="bg-off-white py-12 sm:py-20" id="consultation">
+    <section className="bg-off-white py-12 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start min-w-0">
           <motion.div

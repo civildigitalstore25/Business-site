@@ -7,7 +7,7 @@ import { ScrollRow, ScrollRowItem } from "@/components/common/ScrollRow";
 
 function ReviewCard({ review }: { review: (typeof CLIENT_REVIEWS)[number] }) {
   return (
-    <article className="h-full bg-white border border-[#E2E8F0] rounded-xl p-5 flex flex-col hover:shadow-[0_8px_30px_rgba(15,23,42,0.08)] transition-shadow">
+    <article className="h-full bg-white border border-[#E2E8F0] rounded-xl p-5 flex flex-col hover:-translate-y-1 hover:shadow-[0_12px_32px_rgba(15,23,42,0.10)] transition-all duration-300">
       <Quote size={18} className="text-sky/60 mb-3 flex-shrink-0" />
       <p className="text-xs text-[#64748B] leading-relaxed flex-1 mb-4 line-clamp-4">
         &ldquo;{review.text}&rdquo;
@@ -27,7 +27,7 @@ function ReviewCard({ review }: { review: (typeof CLIENT_REVIEWS)[number] }) {
 
 export function HomeReviews() {
   return (
-    <section className="bg-off-white py-10 sm:py-16 border-y border-[#E2E8F0] w-full" id="reviews">
+    <section className="scroll-mt-24 bg-off-white py-10 sm:py-16 border-y border-[#E2E8F0] w-full" id="reviews">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <MotionSection className="w-full mb-6 sm:mb-10">
           <p className="section-label mb-2">Client Reviews</p>

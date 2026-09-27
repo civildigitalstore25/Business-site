@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { HOME_HERO, HOME_STATS } from "@/lib/constants";
+import { SectionLink } from "@/components/common/SectionLink";
 import { MotionSection } from "@/components/common/MotionSection";
 import { MotionStagger, MotionStaggerItem } from "@/components/common/MotionStagger";
 
@@ -31,10 +32,10 @@ export function HomeHero() {
               {HOME_HERO.subheadline}
             </p>
             <div className="mt-8 flex flex-col sm:flex-row flex-wrap gap-3">
-              <Link href={HOME_HERO.primaryCta.href} className="btn-sky inline-flex items-center justify-center gap-2 text-sm w-full sm:w-auto">
+              <SectionLink href={HOME_HERO.primaryCta.href} className="btn-sky inline-flex items-center justify-center gap-2 text-sm w-full sm:w-auto">
                 {HOME_HERO.primaryCta.label}
                 <ArrowRight size={14} />
-              </Link>
+              </SectionLink>
               <Link href={HOME_HERO.secondaryCta.href} className="btn-outline inline-flex items-center justify-center gap-2 text-sm w-full sm:w-auto">
                 {HOME_HERO.secondaryCta.label}
                 <ArrowRight size={14} />
@@ -45,7 +46,7 @@ export function HomeHero() {
           <MotionStagger className="grid grid-cols-2 gap-4">
             {HOME_STATS.map((stat) => (
               <MotionStaggerItem key={stat.label}>
-                <div className="bg-white border border-[#E2E8F0] rounded-xl p-5 sm:p-6 shadow-sm h-full">
+                <div className="card-hover bg-white border border-[#E2E8F0] rounded-xl p-5 sm:p-6 shadow-sm h-full">
                   <p className="text-2xl sm:text-3xl font-extrabold text-[#0F172A]">{stat.value}</p>
                   <p className="text-[11px] text-[#64748B] mt-1 leading-snug">{stat.label}</p>
                 </div>

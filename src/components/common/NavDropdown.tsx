@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { SectionLink as Link } from "@/components/common/SectionLink";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -56,7 +56,7 @@ export function NavDropdown({
             {showViewAll && (
               <Link
                 href={href}
-                onClick={onNavigate}
+                onNavigate={onNavigate}
                 className="block text-xs text-slate-400 hover:text-white py-1.5"
               >
                 All {label}
@@ -66,7 +66,7 @@ export function NavDropdown({
               <Link
                 key={child.href}
                 href={child.href}
-                onClick={onNavigate}
+                onNavigate={onNavigate}
                 className="block text-xs text-slate-400 hover:text-white py-1.5"
               >
                 {child.label}
@@ -97,7 +97,7 @@ export function NavDropdown({
             <>
               <Link
                 href={href}
-                onClick={() => { setOpen(false); onNavigate?.(); }}
+                onNavigate={() => { setOpen(false); onNavigate?.(); }}
                 className="block px-4 py-2 text-xs font-semibold text-sky hover:bg-slate-800"
               >
                 View all {label.toLowerCase()}
@@ -109,7 +109,7 @@ export function NavDropdown({
             <Link
               key={child.href}
               href={child.href}
-              onClick={() => { setOpen(false); onNavigate?.(); }}
+              onNavigate={() => { setOpen(false); onNavigate?.(); }}
               className="block px-4 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800"
             >
               {child.label}

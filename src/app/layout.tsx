@@ -4,6 +4,7 @@ import { Analytics } from "@/components/common/Analytics";
 import { SiteHeaderClient } from "@/components/common/SiteHeaderClient";
 import { SiteFooter } from "@/components/common/SiteFooter";
 import { ChatWidget } from "@/components/common/ChatWidget";
+import { HashScroll } from "@/components/common/HashScroll";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -38,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+    <html lang="en" className="h-full antialiased" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href={GOOGLE_FONTS.preconnect} />
         <link
@@ -49,6 +50,7 @@ export default function RootLayout({
         <link rel="stylesheet" href={GOOGLE_FONTS.stylesheet} />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground antialiased" suppressHydrationWarning>
+        <HashScroll />
         <Analytics />
         <SiteHeaderClient />
         <main className="flex-1 flex flex-col min-w-0 overflow-x-clip">{children}</main>

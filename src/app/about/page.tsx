@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { SectionLink as Link } from "@/components/common/SectionLink";
 import { ArrowRight, CheckCircle2, Target, Compass } from "lucide-react";
 import {
   ABOUT_HERO, ABOUT_STATS, ABOUT_VISION, ABOUT_MISSION,

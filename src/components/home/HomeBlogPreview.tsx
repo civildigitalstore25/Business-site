@@ -8,7 +8,7 @@ function BlogCard({ post }: { post: (typeof BLOG_POSTS)[number] }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group h-full bg-white border border-[#E2E8F0] rounded-xl p-5 hover:border-sky hover:shadow-[0_8px_30px_rgba(15,23,42,0.08)] transition-all min-w-0 block"
+      className="group h-full bg-white border border-[#E2E8F0] rounded-xl p-5 hover:-translate-y-1 hover:border-sky hover:shadow-[0_12px_32px_rgba(15,23,42,0.10)] transition-all duration-300 min-w-0 block"
     >
       <span className="text-[10px] font-bold uppercase tracking-widest text-sky">{post.category}</span>
       <h3 className="text-sm font-bold text-navy mt-2 mb-2 group-hover:text-sky transition-colors leading-snug line-clamp-2">

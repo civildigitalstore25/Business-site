@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { SectionLink } from "@/components/common/SectionLink";
 import { ArrowRight, CheckCircle2, ExternalLink, Globe, Sparkles, Layers } from "lucide-react";
 import { PROJECTS, ROUTES, ProjectItem } from "@/lib/constants";
 import { MotionSection } from "@/components/common/MotionSection";
@@ -14,7 +15,7 @@ export function HomeProjectSection() {
     PROJECTS.find((p) => p.id === activeId) || PROJECTS[0];
 
   return (
-    <section className="bg-gradient-to-b from-slate-50 via-white to-slate-50 py-12 sm:py-20 lg:py-24" id="projects">
+    <section className="scroll-mt-24 bg-gradient-to-b from-slate-50 via-white to-slate-50 py-12 sm:py-20 lg:py-24" id="projects">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <MotionSection className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 lg:mb-16">
@@ -161,13 +162,13 @@ export function HomeProjectSection() {
                   <span>Visit Website</span>
                   <ExternalLink size={14} />
                 </Link>
-                <Link
+                <SectionLink
                   href={ROUTES.consultation}
                   className="w-full sm:w-auto px-4 py-2.5 sm:py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-navy text-xs font-semibold inline-flex items-center justify-center gap-1.5 transition-colors"
                 >
                   <span>Request Similar Project</span>
                   <ArrowRight size={13} />
-                </Link>
+                </SectionLink>
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@ export function HomeFaq() {
   const [openId, setOpenId] = useState<string | null>(null);
 
   return (
-    <section className="bg-white py-12 sm:py-16 border-t border-[#E2E8F0]" id="faq">
+    <section className="scroll-mt-24 bg-white py-12 sm:py-16 border-t border-[#E2E8F0]" id="faq">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <MotionSection className="text-center mb-8 sm:mb-10">
           <p className="section-label mb-2">FAQ</p>

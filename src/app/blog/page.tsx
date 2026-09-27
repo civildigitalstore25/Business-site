@@ -23,7 +23,7 @@ export default function BlogPage() {
       <section className="bg-off-white py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {BLOG_POSTS.map((post) => (
-            <article key={post.slug} className="bg-white border border-[#E2E8F0] rounded-xl p-5 sm:p-6 hover:shadow-lg transition-shadow min-w-0">
+            <article key={post.slug} className="bg-white border border-[#E2E8F0] rounded-xl p-5 sm:p-6 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 min-w-0">
               <span className="text-[10px] font-bold uppercase tracking-widest text-sky">{post.category}</span>
               <h2 className="text-lg font-bold text-navy mt-2 mb-2">
                 <Link href={`/blog/${post.slug}`} className="hover:text-sky transition-colors">

@@ -1,9 +1,11 @@
+import { ROUTES } from "./routes";
+
 export const HOME_HERO = {
   eyebrow: "IT Consulting & Software Development",
   headline: "We Build Solutions.\nYou Grow Faster.",
   subheadline:
     "Tomscope provides IT consulting, website and mobile app development, hosting, SEO, DevOps, and API integrations — delivered with agile methodology and clean, maintainable code.",
-  primaryCta: { label: "Book a Consultation", href: "/#consultation" },
+  primaryCta: { label: "Book a Consultation", href: ROUTES.consultation },
   secondaryCta: { label: "View Our Services", href: "/services" },
 } as const;
 

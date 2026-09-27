@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
+import { SectionLink as Link } from "@/components/common/SectionLink";
 import { useEffect, useState } from "react";
-import { SERVICES_LIST } from "@/lib/constants";
+import { ROUTES, SERVICES_LIST } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export function ServicesSidebar() {
@@ -56,7 +56,7 @@ export function ServicesSidebar() {
           We&apos;ll pair you with the right team for your project.
         </p>
         <Link
-          href="/#consultation"
+          href={ROUTES.consultation}
           className="block text-center text-xs font-semibold bg-sky text-white rounded-lg py-2 hover:bg-[#0369A1] transition-colors"
         >
           Book a Consultation

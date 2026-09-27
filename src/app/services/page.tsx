@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { SectionLink as Link } from "@/components/common/SectionLink";
 import { ArrowRight } from "lucide-react";
 import { SERVICES_HERO, ROUTES } from "@/lib/constants";
 import { ServicesPageContent } from "@/components/services/ServicesPageContent";

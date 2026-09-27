@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { SectionLink as Link } from "@/components/common/SectionLink";
 import Image from "next/image";
 import { Mail, Phone } from "lucide-react";
 import {

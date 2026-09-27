@@ -14,7 +14,7 @@ const ICON_MAP: Record<string, React.ComponentType<{ size?: number; className?: 
 function ServiceCard({ service }: { service: (typeof HOME_SERVICES)[number] }) {
   const Icon = ICON_MAP[service.icon];
   return (
-    <div className="group h-full bg-white border border-[#E2E8F0] rounded-xl p-4 sm:p-6 flex flex-col hover:border-sky hover:shadow-[0_8px_30px_rgba(2,132,199,0.10)] transition-all duration-300 min-w-0">
+    <div className="group h-full bg-white border border-[#E2E8F0] rounded-xl p-4 sm:p-6 flex flex-col hover:-translate-y-1 hover:border-sky hover:shadow-[0_12px_32px_rgba(2,132,199,0.14)] transition-all duration-300 min-w-0">
       <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg border border-[#E2E8F0] flex items-center justify-center mb-3 sm:mb-4 group-hover:border-sky/40 group-hover:bg-sky/5 transition-colors">
         {Icon && <Icon size={20} className="text-charcoal group-hover:text-sky transition-colors" />}
       </div>
@@ -34,7 +34,7 @@ function ServiceCard({ service }: { service: (typeof HOME_SERVICES)[number] }) {
 
 export function HomeServicesGrid() {
   return (
-    <section className="bg-white py-10 sm:py-16 w-full" id="services">
+    <section className="scroll-mt-24 bg-white py-10 sm:py-16 w-full" id="services">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <MotionSection className="w-full mb-6 sm:mb-10">
           <p className="section-label mb-2">Our Services</p>

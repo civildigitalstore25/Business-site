@@ -6,6 +6,7 @@ export * from "./routes";
 export * from "./nav";
 export * from "./site";
 export * from "./home";
+export * from "./hero-banners";
 export * from "./services";
 export * from "./tech-stack";
 export * from "./projects";

@@ -1,3 +1,5 @@
+import { getHeroBanners } from "@/lib/hero-banner-files";
+import { HeroBannerCarousel } from "@/components/home/HeroBannerCarousel";
 import { HomeHero } from "@/components/home/HomeHero";
 import { HomeServicesGrid } from "@/components/home/HomeServicesGrid";
 import { HomePrinciplesClient } from "@/components/home/HomePrinciplesClient";
@@ -12,6 +14,7 @@ import { HomeFaq } from "@/components/home/HomeFaq";
 export default function HomePage() {
   return (
     <>
+      <HeroBannerCarousel banners={getHeroBanners()} />
       <HomeHero />
       <HomeServicesGrid />
       <HomePrinciplesClient />

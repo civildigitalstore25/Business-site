@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { SectionLink as Link } from "@/components/common/SectionLink";
 import { ROUTES, NAV_LINKS, SITE } from "@/lib/constants";
 
 /** Static header placeholder — same layout, no interactive buttons (SSR / pre-hydration). */

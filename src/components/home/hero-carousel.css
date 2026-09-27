@@ -1,0 +1,93 @@
+.hero-stage {
+  perspective: 1400px;
+  perspective-origin: 50% 42%;
+}
+
+.hero-slide {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.hero-banner-fallback {
+  background:
+    radial-gradient(ellipse at 18% 20%, rgb(56 189 248 / 0.38), transparent 52%),
+    radial-gradient(ellipse at 82% 78%, rgb(2 132 199 / 0.4), transparent 48%),
+    linear-gradient(155deg, #0f172a 0%, #1e293b 58%, #0c4a6e 100%);
+}
+
+.hero-orbit {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  border-radius: 9999px;
+  border: 1px solid rgb(56 189 248 / 0.28);
+  pointer-events: none;
+  animation: hero-spin 32s linear infinite;
+}
+
+.hero-orbit-lg {
+  width: min(920px, 140%);
+  height: min(920px, 140%);
+}
+
+.hero-orbit-sm {
+  width: min(560px, 90%);
+  height: min(560px, 90%);
+  animation-duration: 22s;
+  animation-direction: reverse;
+  border-color: rgb(255 255 255 / 0.14);
+}
+
+.hero-carousel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 9999px;
+  color: white;
+  background: rgb(255 255 255 / 0.08);
+  border: 1px solid rgb(255 255 255 / 0.16);
+}
+
+.hero-carousel-btn:hover {
+  background: rgb(255 255 255 / 0.16);
+}
+
+.hero-carousel-btn:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+.hero-carousel-dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  background: rgb(255 255 255 / 0.35);
+}
+
+.hero-carousel-dot:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+.hero-carousel-dot-active {
+  width: 1.5rem;
+  background: #38bdf8;
+}
+
+@keyframes hero-spin {
+  from {
+    transform: translate(-50%, -50%) rotateX(68deg) rotateZ(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateX(68deg) rotateZ(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-orbit {
+    animation: none;
+    transform: translate(-50%, -50%) rotateX(68deg);
+  }
+}

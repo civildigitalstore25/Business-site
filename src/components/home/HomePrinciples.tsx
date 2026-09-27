@@ -38,7 +38,7 @@ export function HomePrinciples() {
   };
 
   return (
-    <section className="bg-navy text-white py-12 sm:py-16" id="principles">
+    <section className="scroll-mt-24 bg-navy text-white py-12 sm:py-16" id="principles">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-w-0">
         <MotionSection className="max-w-2xl mb-10">
           <p className="text-sky text-[10px] font-bold uppercase tracking-widest mb-2">How We Code</p>

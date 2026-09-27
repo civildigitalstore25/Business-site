@@ -6,6 +6,9 @@ import { HomeConsultationSkeleton } from "@/components/home/HomeConsultationSkel
 
 export function HomeConsultationClient() {
   const hydrated = useHydrated();
-  if (!hydrated) return <HomeConsultationSkeleton />;
-  return <HomeConsultationForm />;
+  return (
+    <div id="consultation" className="scroll-mt-24">
+      {hydrated ? <HomeConsultationForm /> : <HomeConsultationSkeleton />}
+    </div>
+  );
 }
