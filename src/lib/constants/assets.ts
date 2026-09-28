@@ -1,8 +1,8 @@
 export const PUBLIC_ASSETS = {
-  logo: "/logo.jpg",
+  logo: "/logo.png",
   dashboardMockup: "/assets/cover-image.png",
   ogImage: "/assets/og-image.svg",
-  favicon: "/logo.jpg",
+  favicon: "/logo.png",
 } as const;
 
 export const DASHBOARD_MOCKUP = {

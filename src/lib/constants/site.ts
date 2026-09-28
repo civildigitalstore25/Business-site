@@ -1,9 +1,9 @@
 export const SITE = {
-  name: "Tomscope",
+  name: "TomScope",
   tagline: "IT Consulting & Software Development",
-  title: "Tomscope | IT Consulting, Web & Mobile Development",
+  title: "TomScope | IT Consulting, Web & Mobile Development",
   description:
-    "Tomscope delivers IT consulting, website and mobile app development, hosting, SEO, DevOps, and API integrations — built with agile practices and clean, maintainable code.",
+    "TomScope delivers IT consulting, website and mobile app development, hosting, SEO, DevOps, and API integrations — built with agile practices and clean, maintainable code.",
   url: "https://tomscope.com",
   metadataBase: "https://tomscope.com",
   locale: "en_US",

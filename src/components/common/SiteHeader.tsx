@@ -63,7 +63,7 @@ export function SiteHeader() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href={ROUTES.home} className="flex items-center gap-2.5 shrink-0 min-w-0 group">
-            <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-lg overflow-hidden border border-white/20 shadow-sm shrink-0 bg-white/10">
+            <div className="relative w-9 h-9 sm:w-13 sm:h-13 shrink-0">
               <Image
                 src={PUBLIC_ASSETS.logo}
                 alt={`${SITE.name} Logo`}
@@ -73,7 +73,7 @@ export function SiteHeader() {
               />
             </div>
             <span className="text-lg sm:text-xl font-bold text-white tracking-tight truncate">
-              {SITE.name.toUpperCase()}
+              {SITE.name}
             </span>
           </Link>
 

@@ -35,7 +35,7 @@ function FooterBrand() {
   return (
     <>
       <div className="flex items-center gap-2.5 mb-2">
-        <div className="relative w-8 h-8 rounded-lg overflow-hidden border border-white/20 shrink-0 bg-white/10">
+        <div className="relative w-8 h-8 shrink-0">
           <Image
             src={PUBLIC_ASSETS.logo}
             alt={`${SITE.name} Logo`}
@@ -43,7 +43,7 @@ function FooterBrand() {
             className="object-cover object-center"
           />
         </div>
-        <span className="text-lg font-bold tracking-tight">{SITE.name.toUpperCase()}</span>
+        <span className="text-lg font-bold tracking-tight">{SITE.name}</span>
       </div>
       <p className="mt-2 text-xs text-slate-400 leading-relaxed">{SITE.tagline}</p>
       <div className="mt-4">
