@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import { CONTACT } from "@/lib/constants";
+import { CONTACT, SITE } from "@/lib/constants";
+import { buildConsultationEmailHtml } from "@/lib/email/consultation-template";
 
 type ConsultationBody = {
   fullName?: string;
@@ -9,14 +10,6 @@ type ConsultationBody = {
   projectType?: string;
   message?: string;
 };
-
-function escapeHtml(value: string) {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
 
 export async function POST(request: Request) {
   try {
@@ -45,20 +38,13 @@ export async function POST(request: Request) {
     const smtpUser = process.env.SMTP_USER;
     const smtpPass = process.env.SMTP_PASS?.replace(/\s/g, "");
 
-    const emailHtml = `
-      <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:20px;border:1px solid #e2e8f0;border-radius:8px;">
-        <h2 style="color:#0f172a;border-bottom:2px solid #e2e8f0;padding-bottom:10px;">New Consultation Request</h2>
-        <p><strong>Name:</strong> ${escapeHtml(fullName)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(workEmail)}</p>
-        <p><strong>Company:</strong> ${escapeHtml(company)}</p>
-        <p><strong>Project Type:</strong> ${escapeHtml(projectType)}</p>
-        <div style="margin-top:20px;padding:15px;background:#f8fafc;border-left:4px solid #0284c7;">
-          <p style="margin:0;"><strong>Message:</strong></p>
-          <p style="margin:10px 0 0;white-space:pre-wrap;">${escapeHtml(message)}</p>
-        </div>
-        <p style="font-size:12px;color:#64748b;margin-top:24px;">Submitted from the Tomscope consultation form.</p>
-      </div>
-    `;
+    const emailHtml = buildConsultationEmailHtml({
+      fullName,
+      workEmail,
+      company,
+      projectType,
+      message,
+    });
 
     if (!smtpHost || !smtpUser || !smtpPass) {
       console.warn("SMTP not configured — logging submission only.");
@@ -78,10 +64,10 @@ export async function POST(request: Request) {
     });
 
     await transporter.sendMail({
-      from: `"Tomscope Consultation" <${smtpUser}>`,
+      from: `"${SITE.name} Consultation" <${smtpUser}>`,
       to: adminEmail,
       replyTo: workEmail,
-      subject: `Tomscope Consultation — ${fullName} (${projectType})`,
+      subject: `${SITE.name} Consultation — ${fullName} (${projectType})`,
       html: emailHtml,
     });
 
