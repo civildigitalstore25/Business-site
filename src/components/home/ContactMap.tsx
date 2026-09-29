@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { CONTACT, MAP_EMBED_SRC, SITE } from "@/lib/constants";
 
 export function ContactMap() {
@@ -10,6 +10,10 @@ export function ContactMap() {
         <div>
           <p className="text-sm font-semibold text-navy">{CONTACT.visitLabel}</p>
           <p className="text-xs text-[#64748B] mt-0.5">{CONTACT.address}</p>
+          <a href={`mailto:${CONTACT.email}`} className="mt-1 inline-flex items-center gap-1.5 text-xs text-sky hover:underline">
+            <Mail size={12} />
+            {CONTACT.email}
+          </a>
         </div>
       </div>
       <div className="rounded-xl overflow-hidden border border-[#E2E8F0] bg-white shadow-sm h-[240px] sm:h-[320px] lg:h-[380px]">

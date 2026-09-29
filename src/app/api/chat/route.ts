@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { GoogleGenAI } from "@google/genai";
+import { CONTACT } from "@/lib/constants";
 
 // Ensure the API key exists
 const apiKey = process.env.GEMINI_API_KEY;
@@ -67,8 +68,8 @@ Here is important context about Tomscope:
    We build code with Agile practices, using DRY (Don't Repeat Yourself) principles, keeping solutions simple and purposeful (UNDOAT), writing clean/maintainable files under 250 lines, and using reusable components.
 
 4. CONTACT INFO & SOCIAL LINKS:
-   - Email: info@tomscope.com
-   - Phone: +91 88074 23228
+   - Email: ${CONTACT.email}
+   - Phone: ${CONTACT.phone}
    - Address: Vadakkumangudi, Thanjavur, Tamil Nadu, India
    - Website: https://tomscope.com
    - Facebook: https://www.facebook.com/tommscope
@@ -80,7 +81,7 @@ GUIDELINES FOR YOUR RESPONSES:
 - Respond in a professional, welcoming, and concise tone.
 - Format your response cleanly using markdown (e.g. bolding, lists) when appropriate, keeping paragraphs brief so they fit well in a small chat widget screen.
 - If a customer asks to schedule a consultation, direct them to our Consultation form on the website (usually found at the homepage or via the 'Schedule' CTAs).
-- If you do not know the answer to a question, politely suggest that they contact our support team directly at info@tomscope.com or call +91 88074 23228.`;
+- If you do not know the answer to a question, politely suggest that they contact our support team directly at ${CONTACT.email} or call ${CONTACT.phone}.`;
 
     // Attempt generation with fallback models in case of 503 high demand or other server errors
     const models = ["gemini-3.5-flash", "gemini-2.0-flash", "gemini-3.1-flash-lite"];

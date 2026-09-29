@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { CONTACT } from "@/lib/constants";
 
 type ConsultationBody = {
   fullName?: string;
@@ -38,7 +39,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Please provide a valid email address." }, { status: 400 });
     }
 
-    const adminEmail = process.env.ADMIN_EMAIL || "info@tomscope.com";
+    const adminEmail = process.env.ADMIN_EMAIL || CONTACT.email;
     const smtpHost = process.env.SMTP_HOST;
     const smtpPort = process.env.SMTP_PORT;
     const smtpUser = process.env.SMTP_USER;

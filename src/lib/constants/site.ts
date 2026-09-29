@@ -9,10 +9,10 @@ export const SITE = {
   locale: "en_US",
 } as const;
 
-export const GA_MEASUREMENT_ID = "G-H3SSKLJ5B9";
+export const GA_MEASUREMENT_ID = "G-86EHM7X6FC";
 
 export const CONTACT = {
-  email: "info@tomscope.com",
+  email: "tomscopeteam@gmail.com",
   phone: "+91 88074 23228",
   address: "TomScope Digital Marketing Agency",
   visitLabel: "Visit us",
