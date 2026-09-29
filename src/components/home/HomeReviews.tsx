@@ -19,7 +19,6 @@ function ReviewCard({ review }: { review: (typeof CLIENT_REVIEWS)[number] }) {
       </div>
       <div>
         <p className="text-sm font-semibold text-navy">{review.name}</p>
-        <p className="text-[11px] text-[#94A3B8]">{review.role}</p>
       </div>
     </article>
   );
